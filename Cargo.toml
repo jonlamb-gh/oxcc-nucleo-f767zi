@@ -1,0 +1,36 @@
+[package]
+name = "oxcc-nucleo-f767zi"
+version = "0.1.0"
+authors = ["Jon Lamb"]
+repository = "https://github.com/jonlamb-gh/oxcc-nucleo-f767zi"
+description = "Board Support Crate for the NUCLEO-F767ZI"
+keywords = ["no-std", "arm", "cortex-m", "stm32"]
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+embedded-hal = "0.2.1"
+nb = "0.1.1"
+oxcc-stm32f767-hal = "0.1.0"
+
+[dev-dependencies.nb]
+version = "0.1.1"
+
+[dependencies.cast]
+default-features = false
+version = "0.2.2"
+
+[dev-dependencies.oxcc-stm32f767-hal]
+version = "0.1.0"
+features = ["rt"]
+
+[dev-dependencies]
+aligned = "0.2.0"
+cortex-m = "0.5.7"
+cortex-m-rt = "0.6.3"
+cortex-m-semihosting = "0.3.1"
+panic-semihosting = "0.5.0"
+madgwick = "0.1.1"
+
+[features]
+rt = ["oxcc-stm32f767-hal/rt"]
+
